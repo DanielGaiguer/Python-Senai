@@ -1,0 +1,2 @@
+produto A, 100
+produto B, 250

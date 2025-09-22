@@ -1,0 +1,100 @@
+{
+    "1": {
+        "Id": 1,
+        "nome": "Jo\u00c3\u00a3o Silva",
+        "idade": 17,
+        "email": "joao@email.com",
+        "telefone": "11999990001",
+        "turma": "1A",
+        "materia": "Matem\u00c3\u00a1tica",
+        "notas": [
+            8.5,
+            9.0,
+            7.5
+        ]
+    },
+    "2": {
+        "Id": 2,
+        "nome": "Maria Oliveira",
+        "idade": 16,
+        "email": "maria@email.com",
+        "telefone": "11999990002",
+        "turma": "2A",
+        "materia": "Portugu\u00c3\u00aas",
+        "notas": [
+            9.0,
+            8.0,
+            8.5
+        ]
+    },
+    "3": {
+        "Id": 3,
+        "nome": "Pedro Santos",
+        "idade": 18,
+        "email": "pedro@email.com",
+        "telefone": "11999990003",
+        "turma": "3A",
+        "materia": "Hist\u00c3\u00b3ria",
+        "notas": [
+            7.5,
+            8.0,
+            9.0
+        ]
+    },
+    "4": {
+        "Id": 4,
+        "nome": "Ana Costa",
+        "idade": 17,
+        "email": "ana@email.com",
+        "telefone": "11999990004",
+        "turma": "1B",
+        "materia": "Biologia",
+        "notas": [
+            8.0,
+            7.5,
+            8.5
+        ]
+    },
+    "5": {
+        "Id": 5,
+        "nome": "Lucas Pereira",
+        "idade": 16,
+        "email": "lucas@email.com",
+        "telefone": "11999990005",
+        "turma": "2B",
+        "materia": "Qu\u00c3\u00admica",
+        "notas": [
+            9.5,
+            8.5,
+            9.0
+        ]
+    },
+    "6": {
+        "Id": 6,
+        "nome": "Beatriz Lima",
+        "idade": 18,
+        "email": "beatriz@email.com",
+        "telefone": "11999990006",
+        "turma": "3B",
+        "materia": "F\u00c3\u00adsica",
+        "notas": [
+            7.0,
+            8.0,
+            7.5
+        ]
+    },
+    "0": {
+        "Id": 0,
+        "nome": "Daniel Gaiguer",
+        "idade": 5,
+        "email": "gaiguer2019@gmail.com",
+        "telefone": "34324234324",
+        "turma": "3A",
+        "materia": "Matematica",
+        "notas": [
+            9.0,
+            6.0,
+            8.0
+        ]
+    }
+}

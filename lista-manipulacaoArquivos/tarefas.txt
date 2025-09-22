@@ -1,0 +1,7 @@
+& C:/Users/gaigu/AppData/Local/Programs/Python/Python313/python.exe c:/Users/gaigu/Documents/estudos/python-senai/lista-manipulacaoArquivos/ex01-20.py
+Dormir
+ir embora
+& C:/Users/gaigu/AppData/Local/Programs/Python/Python313/python.exe c:/Users/gaigu/Documents/estudos/python-senai/lista-manipulacaoArquivos/ex01-20.py
+& C:/Users/gaigu/AppData/Local/Programs/Python/Python313/python.exe c:/Users/gaigu/Documents/estudos/python-senai/lista-manipulacaoArquivos/ex01-20.py
+teste
+teste2
