@@ -114,7 +114,9 @@ with tab4:
     for aluno_id, aluno in st.session_state.alunos.items():
         if aluno["turma"] == select_turma:
             for nota in aluno["notas"]:
-                soma += nota
-        alunos += 1
+                somaNota = nota / len(aluno["notas"])
+                soma += somaNota
+            alunos += 1
     
-    st.write(f"A média de notas da turma é de: {soma / alunos:.2f}")
+    st.subheader(f"A média de notas da turma é: {soma / alunos:.2f}")
+    st.subheader(f"Quantidade de alunos na turma: {alunos}")
