@@ -75,18 +75,28 @@ with tab1:
             st.error("Erro ao cadastrar aluno, preencha todos os campos corretamente.")
 
 with tab2:
+    
     st.subheader("Turmas")
-    col5, col6 = st.columns(2)
-    with col5:
-        if st.session_state.turmas["turmas"]:
-            select_turma = st.radio("Turmas cadastradas:", st.session_state.turmas["turmas"])
-        else:
-            st.info("Nenhuma turma cadastrada no momento")
-    with col6:
-        if st.button("Apagar Turma Selecionada", key="delTurma"):
-            st.session_state.turmas["turmas"].pop(select_turma)
-            salvar_turmas()
-            st.rerun()
+    if st.session_state.turmas["turmas"]:
+        select_turma = st.radio("Turmas cadastradas:", st.session_state.turmas["turmas"])
+    else:
+        st.info("Nenhuma turma cadastrada no momento")
+    if st.button("Apagar Turma Selecionada", key="delTurma"):
+        st.session_state.turmas["turmas"].remove(select_turma)  # remove pelo nome
+        salvar_turmas()
+        st.rerun()
+        st.success(f"Turma {select_turma} apagada com sucesso!")
+
+    turma = st.text_input("Deseja adicionar uma turma?", key="novaTurma")
+    if st.button("Adicionar nova turma", key="addTurma"):
+        if turma:
+            if turma in st.session_state.turmas["turmas"]:
+                st.info(f"Turma {turma} já existente")
+            else:
+                st.session_state.turmas["turmas"].append(turma)
+                salvar_turmas()
+                st.rerun()
+                st.success(f"Turma {turma} adicionada com sucesso!")
 
 with tab3:
     st.subheader("Visualizar Alunos")
@@ -95,3 +105,16 @@ with tab3:
     for aluno_id, aluno in st.session_state.alunos.items():
         if aluno["turma"] == select_turma:
             st.dataframe([aluno])  
+
+with tab4:
+    alunos = 0
+    soma = 0
+    st.subheader("Estatistícas")
+    select_turma = st.selectbox("Turma", st.session_state.turmas["turmas"], key="selectTab4")
+    for aluno_id, aluno in st.session_state.alunos.items():
+        if aluno["turma"] == select_turma:
+            for nota in aluno["notas"]:
+                soma += nota
+        alunos += 1
+    
+    st.write(f"A média de notas da turma é de: {soma / alunos:.2f}")
