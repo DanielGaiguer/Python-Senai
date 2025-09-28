@@ -109,6 +109,7 @@ with tab3:
 with tab4:
     alunos = 0
     soma = 0
+    somaIdade = 0
     st.subheader("Estatistícas")
     select_turma = st.selectbox("Turma", st.session_state.turmas["turmas"], key="selectTab4")
     for aluno_id, aluno in st.session_state.alunos.items():
@@ -117,6 +118,8 @@ with tab4:
                 somaNota = nota / len(aluno["notas"])
                 soma += somaNota
             alunos += 1
+            somaIdade += aluno["idade"]
     
     st.subheader(f"A média de notas da turma é: {soma / alunos:.2f}")
     st.subheader(f"Quantidade de alunos na turma: {alunos}")
+    st.subheader(f"Média de idade dos alunos: {int(somaIdade / alunos)}")
